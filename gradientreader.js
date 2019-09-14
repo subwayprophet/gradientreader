@@ -3,6 +3,8 @@
 		1 : {start:'0,0,255',end:'0,0,0'},
 		2 : {start:'0,0,0',end:'255,0,0'},
 		3 : {start:'255,0,0',end:'0,0,0'},
+		4 : {start:'0,0,0',end:'255,80,0'},
+		5 : {start:'255,80,0',end:'0,0,0'}
 	}
 	var lineNum2StartingColorGREENPURPLE = {
 		0 : {start:'0,0,0',end:'0,200,0'},
@@ -22,7 +24,6 @@
 		2 : {start:'0,0,0',end:'255,165,0'},
 		3 : {start:'255,165,0',end:'0,0,0'},
 	}
-	var lineChunkSize = 4;
 
 	var colorMapsByParagraph = {
 		0 : lineNum2StartingColorBLUERED,
@@ -30,7 +31,7 @@
 		2 : lineNum2StartingColorORANGEBLUE,
 		3 : lineNum2StartingColorORANGERED
 	}
-	var paraChunkSize = 4;
+	var paraChunkSize = Object.keys(colorMapsByParagraph).length;
 
 
 	function reGradient() {
@@ -45,9 +46,9 @@
 
 	function applyGradient(el, gradientMap) {
 		var lines = lineWrapDetector.getLines(el);
-
 		
 		var currLineNum = 0;
+		var lineChunkSize = Object.keys(gradientMap).length;
 
 		for(let i=0; i<lines.length; i++) {
 			let chunks = lines[i];
