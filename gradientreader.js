@@ -36,7 +36,7 @@
 
 	function reGradient() {
 		// var ps = document.getElementsByTagName('p');
-		var ps = document.querySelectorAll('p,span,div.body,div.content,td');
+		var ps = document.querySelectorAll('p,span,div.body,div.content,td,li');
 		let currParaNum = 0;
 		for(let i=0; i<ps.length; i++) {
 			var p = ps[i];
