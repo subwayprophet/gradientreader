@@ -54,7 +54,7 @@
 		for(let i=0; i<lines.length; i++) {
 			let chunks = lines[i];
 
-			//get array rgb values to start line with
+			//get array rgb values to start line with...
 			let key = currLineNum%lineChunkSize;
 			let currColorObj = gradientMap[key];
 			let currLineStartColorString = currColorObj.start;
