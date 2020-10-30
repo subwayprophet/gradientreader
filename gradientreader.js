@@ -92,3 +92,10 @@
 			currLineNum++;
 		}
 	}
+
+  chrome.runtime.onMessage.addListener(
+    function(request) {
+      if (request.toggle) {
+        reGradient();
+      };
+    });
