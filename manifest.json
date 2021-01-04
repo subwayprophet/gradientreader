@@ -27,14 +27,14 @@
       "128": "images/get_started128.png"
     },
     "commands": {
-			"toggle-gradient": {
-				"suggested_key": {
-					"windows": "Alt+Shift+G",
-					"mac": "Alt+Shift+G",
-					"linux": "Alt+Shift+G"
-				},
-				"description": "Toggle gradientization"
-			}
-		},
+      "toggle-gradient": {
+        "suggested_key": {
+          "windows": "Alt+Shift+G",
+          "mac": "Alt+Shift+G",
+          "linux": "Alt+Shift+G"
+        },
+        "description": "Gradientize!"
+      }
+    },
     "manifest_version": 2
   }
